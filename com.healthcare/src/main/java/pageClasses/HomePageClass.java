@@ -34,6 +34,9 @@ public class HomePageClass {
 	@FindBy(xpath = "//img[@src='/openmrs/ms/uiframework/resource/uicommons/images/logo/openmrs-with-title-small.png']")
 	WebElement logoDisplay;
 	
+	@FindBy(xpath = "//a[@id='coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension']")
+	WebElement clickOnFindPatientRecord;
+	
 	public String getTextOfWelcomeMessage()
 	{
 		return generalUtilities.getTextOfElement(homeTextMessage);
@@ -66,6 +69,11 @@ public class HomePageClass {
 	public Boolean isLogoDisplayed()
 	{
 		return generalUtilities.elemnetIsDisplayed(logoDisplay);
+	}
+	
+	public void clickOnFindAPatientButton()
+	{
+		generalUtilities.clickOnElement(clickOnFindPatientRecord);
 	}
 
 }

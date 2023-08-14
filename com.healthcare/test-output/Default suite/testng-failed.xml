@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="executePageClasses.ActiveVisitTestClass">
+      <class name="executePageClasses.FindAPatientTestClass">
         <methods>
+          <include name="verifyTheRegisteredPatientIsFoundOrNotInPatientRecordTable" invocation-numbers="0"/>
           <include name="afterMethod"/>
-          <include name="verifyThePatientIsInActiveVisitsWhenVisitStarts" invocation-numbers="0"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- executePageClasses.ActiveVisitTestClass -->
+      </class> <!-- executePageClasses.FindAPatientTestClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

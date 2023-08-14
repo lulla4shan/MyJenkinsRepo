@@ -38,8 +38,8 @@ public class FindAPatientTestClass extends BaseClass {
 		  	  hp.clickOnRegisterAPatient();
 		  	  
 		  	  rp=new RegisterAPatient(driver);
-		  	 String gname= rp.readStringData(5, 1);
-			  String fName= rp.readStringData(6, 1);
+		  	 String gname= rp.readStringData(5, 2);
+			  String fName= rp.readStringData(6, 2);
 		  	  rp.enterFullName(gname,fName);
 		  	  rp.selectGeneder(1);
 		  	  rp.selectDateOfBirth(rp.readIntegierData(8, 1), 2, rp.readIntegierData(10, 1));
@@ -49,12 +49,13 @@ public class FindAPatientTestClass extends BaseClass {
 		  	  rp.selectPatientConfirm();
 		  	  rp.clickOnHomeButton();
 		  	  rp.clickOnHomeButton();
-		  	  
-		  	  
+		  	  hp.clickOnFindAPatientButton();
+		  	 
+		  
 		  	  fp=new FindAPatientClass(driver);
-			  Boolean actualOutcome= fp.isPatientNameDisplayed(gname.concat(fName));
+			  Boolean actualOutcome= fp.isPatientNameDisplayed(gname);
 			  
-			  System.out.println(gname.concat(fName));
+			  System.out.println(gname);
 			  
 			  Assert.assertTrue(actualOutcome);
 	  }

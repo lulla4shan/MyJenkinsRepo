@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\61415\AppData\Local\Temp\testng-eclipse-285970106\testng-customsuite.xml</span>
+                    <span>C:\Users\61415\AppData\Local\Temp\testng-eclipse-873976542\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="executePageClasses.ActiveVisitTestClass" class="method navigator-link" hash-for-method="verifyThePatientIsInActiveVisitsWhenVisitStarts(admin, Admin123)">verifyThePatientIsInActiveVisitsWhenVisitStarts(admin, Admin123)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="executePageClasses.FindAPatientTestClass" class="method navigator-link" hash-for-method="verifyTheRegisteredPatientIsFoundOrNotInPatientRecordTable(admin, Admin123)">verifyTheRegisteredPatientIsFoundOrNotInPatientRecordTable(admin, Admin123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,38 +121,21 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">executePageClasses.ActiveVisitTestClass</span>
+              <span class="class-name">executePageClasses.FindAPatientTestClass</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyThePatientIsInActiveVisitsWhenVisitStarts(admin, Admin123)">
-                  </a> <!-- verifyThePatientIsInActiveVisitsWhenVisitStarts(admin, Admin123) -->
-                  <span class="method-name">verifyThePatientIsInActiveVisitsWhenVisitStarts</span>
+                  <a name="verifyTheRegisteredPatientIsFoundOrNotInPatientRecordTable(admin, Admin123)">
+                  </a> <!-- verifyTheRegisteredPatientIsFoundOrNotInPatientRecordTable(admin, Admin123) -->
+                  <span class="method-name">verifyTheRegisteredPatientIsFoundOrNotInPatientRecordTable</span>
                   <span class="parameters">(admin,Admin123)</span>
-                  <div class="stack-trace">org.openqa.selenium.ScriptTimeoutException: script timeout
-  (Session info: chrome=115.0.5790.171)
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.18&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ea482f3abffcb060e9705353789226c3, executeAsyncScript {script=arguments[0].click();, args=[{element-6066-11e4-a52e-4f735466cecf=857E796824928BE9B82862F4C3014544_element_688}]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.171, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\61415\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:49879}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49879/devtoo..., se:cdpVersion: 115.0.5790.171, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ea482f3abffcb060e9705353789226c3
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeAsyncScript(RemoteWebDriver.java:484)
-	at utilities.GeneralUtilities.clickUsinJs(GeneralUtilities.java:49)
-	at pageClasses.RegisterAPatient.clickOnStartVisitButton(RegisterAPatient.java:188)
-	at executePageClasses.ActiveVisitTestClass.verifyThePatientIsInActiveVisitsWhenVisitStarts(ActiveVisitTestClass.java:63)
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertTrue(Assert.java:56)
+	at org.testng.Assert.assertTrue(Assert.java:66)
+	at executePageClasses.FindAPatientTestClass.verifyTheRegisteredPatientIsFoundOrNotInPatientRecordTable(FindAPatientTestClass.java:60)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -190,7 +173,7 @@ Session ID: ea482f3abffcb060e9705353789226c3
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\61415\AppData\Local\Temp\testng-eclipse-285970106\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\61415\AppData\Local\Temp\testng-eclipse-873976542\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -199,11 +182,11 @@ Session ID: ea482f3abffcb060e9705353789226c3
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;executePageClasses.ActiveVisitTestClass&quot;&gt;
+      &lt;class name=&quot;executePageClasses.FindAPatientTestClass&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;verifyThePatientIsInActiveVisitsWhenVisitStarts&quot;/&gt;
+          &lt;include name=&quot;verifyTheRegisteredPatientIsFoundOrNotInPatientRecordTable&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- executePageClasses.ActiveVisitTestClass --&gt;
+      &lt;/class&gt; &lt;!-- executePageClasses.FindAPatientTestClass --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -245,14 +228,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyThePatientIsInActiveVisitsWhenVisitStarts')
-data.setCell(0, 2, 'executePageClasses.ActiveVisitTestClass')
-data.setCell(0, 3, 57687);
+data.setCell(0, 1, 'verifyTheRegisteredPatientIsFoundOrNotInPatientRecordTable')
+data.setCell(0, 2, 'executePageClasses.FindAPatientTestClass')
+data.setCell(0, 3, 16379);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 57 seconds</span>
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -267,16 +250,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">executePageClasses.ActiveVisitTestClass</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyThePatientIsNotDisplayedInActiveVisitsWhenVisitNotStarted</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -285,7 +261,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">executePageClasses.ActiveVisitTestClass</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">executePageClasses.FindAPatientTestClass</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">beforeMethod</span>
                 <span class="method-start">0 ms</span>
@@ -293,12 +269,12 @@ return data;
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">verifyThePatientIsInActiveVisitsWhenVisitStarts(admin, Admin123)</span>
-                <span class="method-start">13607 ms</span>
+                <span class="method-name">verifyTheRegisteredPatientIsFoundOrNotInPatientRecordTable(admin, Admin123)</span>
+                <span class="method-start">7532 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">71320 ms</span>
+                <span class="method-start">23913 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

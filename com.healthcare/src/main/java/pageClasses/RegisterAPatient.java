@@ -179,7 +179,9 @@ public class RegisterAPatient {
 	
 	public void clickOnHomeButton()
 	{
-		generalUtilities.clickUsinJs(driver, homeButton);
+		explicitWait.elemnetToBeClicableWait(driver, homeButton);
+		//generalUtilities.clickUsinJs(driver, homeButton);
+		generalUtilities.clickOnElement(homeButton);
 	}
 	
 	public void clickOnStartVisitButton()
