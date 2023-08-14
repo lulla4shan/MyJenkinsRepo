@@ -11,12 +11,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import utilities.ExcelReadClass;
+import utilities.ExplicitWaitClass;
 import utilities.GeneralUtilities;
 
 public class RegisterAPatient {
 	
 	WebDriver driver;
 	GeneralUtilities generalUtilities=new GeneralUtilities();
+	ExplicitWaitClass explicitWait=new ExplicitWaitClass();
 	
 	public RegisterAPatient(WebDriver driver)
 	{
@@ -188,7 +190,8 @@ public class RegisterAPatient {
 	
 	public void clickOnConfirmStartVisitButton()
 	{
-				generalUtilities.clickUsinJs(driver, confirmButton);
+		explicitWait.elemnetToBeClicableWait(driver, confirmStartvisitButton);
+		generalUtilities.clickUsinJs(driver, confirmStartvisitButton);
 	}
 
 

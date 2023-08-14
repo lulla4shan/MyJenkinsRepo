@@ -44,7 +44,7 @@ lp=new LoginPageClass(driver);
   }
 	  
   @Test(dataProviderClass = DataProvider1.class, dataProvider = "login")
-	  public void verifyThePatientIsInActiveVisitsWhenVisitStarts(String uName, String password) throws IOException {
+	  public void verifyThePatientIsInActiveVisitsWhenVisitStarts(String uName, String password) throws IOException, InterruptedException {
 		  lp=new LoginPageClass(driver);
 		  	  
 		  	  lp.loginAsRegistrationDesk(uName, password);
@@ -61,6 +61,7 @@ lp=new LoginPageClass(driver);
 		  	  rp.selectPatientRelated(2, rp.readStringData(18, 1));
 		  	  rp.selectPatientConfirm();
 		  	  rp.clickOnStartVisitButton();
+		  	  rp.clickOnConfirmStartVisitButton();
 		  	  rp.clickOnConfirmStartVisitButton();
 		  	 // rp.clickOnConfirmStartVisitButton();
 		  	  
