@@ -15,8 +15,8 @@ static XSSFWorkbook w;
 static XSSFSheet sh;
 
 public static String getStringData(int a,int b)throws IOException
-{
-	f=new FileInputStream("C:\\Users\\61415\\eclipse-workspace\\com.healthcare\\src\\test\\resources\\excel.xlsx"); //set path of file
+{ 
+	f=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\excel.xlsx"); //set path of file
 	w=new XSSFWorkbook(f); 
 	sh=w.getSheet("sheet1"); //open the sheet we need
 	Row r=sh.getRow(a); 
@@ -25,7 +25,7 @@ public static String getStringData(int a,int b)throws IOException
 }
 public static String getIntegerData(int a,int b) throws IOException
 		{
-	f=new FileInputStream("C:\\Users\\61415\\eclipse-workspace\\com.healthcare\\src\\test\\resources\\excel.xlsx");
+	f=new FileInputStream(System.getProperty("user.dir")+"\\src\\test\\resources\\excel.xlsx");
 	w=new XSSFWorkbook(f);
 	sh=w.getSheet("sheet1");
 	Row r=sh.getRow(a);

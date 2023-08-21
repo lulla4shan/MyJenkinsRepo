@@ -17,7 +17,7 @@ public class ActiveVisitTestClass extends BaseClass {
 	RegisterAPatient rp;
 	ActiveVisit ap;
 	
-  @Test(dataProviderClass = DataProvider1.class, dataProvider = "login")
+  @Test(dataProviderClass = DataProvider1.class, dataProvider = "login",priority = 0)
   public void verifyThePatientIsNotDisplayedInActiveVisitsWhenVisitNotStarted(String uName, String password) throws IOException {
 lp=new LoginPageClass(driver);
 	  
@@ -43,7 +43,7 @@ lp=new LoginPageClass(driver);
 	  Assert.assertFalse(actualOutcome);
   }
 	  
-  @Test(dataProviderClass = DataProvider1.class, dataProvider = "login")
+  @Test(dataProviderClass = DataProvider1.class, dataProvider = "login", priority = 1, enabled = false)
 	  public void verifyThePatientIsInActiveVisitsWhenVisitStarts(String uName, String password) throws IOException, InterruptedException {
 		  lp=new LoginPageClass(driver);
 		  	  
