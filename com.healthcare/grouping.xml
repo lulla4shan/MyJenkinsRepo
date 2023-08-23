@@ -6,7 +6,7 @@
 	<listener class-name="extendReport.TestListener"></listener>
 	</listeners>
 	
-  <test thread-count="5" name="Test">
+  <test  name="Test">
 	  
 	  <parameter name="browser" value="chrome"></parameter>
 	  <groups>
