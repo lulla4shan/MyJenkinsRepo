@@ -51,7 +51,7 @@ public class FindAPatientTestClass extends BaseClass {
 		hp.clickOnFindAPatientButton();
 
 		fp = new FindAPatientClass(driver);
-		Boolean actualOutcome = fp.isPatientNameDisplayed(gname.concat(fName));
+		Boolean actualOutcome = fp.isPatientNameDisplayed(gname.concat(" ").concat(fName));
 
 		System.out.println(gname);
 
