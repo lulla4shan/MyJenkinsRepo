@@ -37,7 +37,7 @@ public class BaseClass {
 	
 	@Parameters("browser")
 
-	@BeforeMethod
+	@BeforeMethod(groups = {"launch"})
 	public void beforeMethod(String browserValue) throws IOException {
 		readProperty();
 		if(browserValue.equalsIgnoreCase("chrome"))
@@ -56,7 +56,7 @@ public class BaseClass {
 	}
 	
 
-	@AfterMethod
+	@AfterMethod(groups = {"close"})
 	public void afterMethod(ITestResult itr) throws IOException {  //ITestResult is interface
 		
 		if(itr.getStatus()==ITestResult.FAILURE) //if ITestResult status and our test result is failed

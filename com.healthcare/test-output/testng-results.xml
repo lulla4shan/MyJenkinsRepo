@@ -1,9 +1,346 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+<testng-results ignored="0" total="7" passed="5" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-21T20:10:39 AEST" name="CrossBrowserTestSuite" finished-at="2023-08-21T20:10:39 AEST" duration-ms="0">
+  <suite started-at="2023-08-23T19:11:06 AEST" name="Suite" finished-at="2023-08-23T19:11:37 AEST" duration-ms="30909">
     <groups>
+      <group name="group2">
+        <method signature="LoginPageTestClass.verifySuceesfullLogin(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" name="verifySuceesfullLogin" class="executePageClasses.LoginPageTestClass"/>
+        <method signature="LoginPageTestClass.verifyUnsuceesfullLoginDataProvider(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" name="verifyUnsuceesfullLoginDataProvider" class="executePageClasses.LoginPageTestClass"/>
+      </group> <!-- group2 -->
+      <group name="group1">
+        <method signature="LoginPageTestClass.verifyTheCorrectSiteIsLoadedWhileHittingTheURL(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" name="verifyTheCorrectSiteIsLoadedWhileHittingTheURL" class="executePageClasses.LoginPageTestClass"/>
+        <method signature="HomePageTestClass.verifyTheLogoIsDisplayedOrNotInHomePage(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.HomePageTestClass@29d80d2b]" name="verifyTheLogoIsDisplayedOrNotInHomePage" class="executePageClasses.HomePageTestClass"/>
+      </group> <!-- group1 -->
     </groups>
-  </suite> <!-- CrossBrowserTestSuite -->
+    <test started-at="2023-08-23T19:11:06 AEST" name="Test2" finished-at="2023-08-23T19:11:20 AEST" duration-ms="13618">
+      <class name="executePageClasses.HomePageTestClass">
+        <test-method is-config="true" signature="createExtendReport(org.testng.ITestContext)[pri:0, instance:executePageClasses.HomePageTestClass@29d80d2b]" started-at="2023-08-23T19:11:06 AEST" name="createExtendReport" finished-at="2023-08-23T19:11:06 AEST" duration-ms="289" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@5c42d2b7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createExtendReport -->
+        <test-method signature="verifyAllTilesAreDisplayedInHomePage(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.HomePageTestClass@29d80d2b]" started-at="2023-08-23T19:11:06 AEST" name="verifyAllTilesAreDisplayedInHomePage" data-provider="login" finished-at="2023-08-23T19:11:06 AEST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:803)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:924)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: org.apache.poi.openxml4j.exceptions.NotOfficeXmlFileException: No valid entries or contents found, this is not a valid OOXML (Office Open XML) file
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:156)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:94)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
+at utilities.ExcelReadClass.getStringData(ExcelReadClass.java:20)
+at executePageClasses.DataProvider1.dp1(DataProvider1.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
+... 19 more
+Caused by: java.util.zip.ZipException: Unexpected record signature: 0X0
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.getNextZipEntry(ZipArchiveInputStream.java:296)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.getNextEntry(ZipArchiveThresholdInputStream.java:152)
+... 34 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAllTilesAreDisplayedInHomePage -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:executePageClasses.HomePageTestClass@29d80d2b]" started-at="2023-08-23T19:11:07 AEST" name="beforeMethod" finished-at="2023-08-23T19:11:16 AEST" duration-ms="9304" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[edge]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyTheLogoIsDisplayedOrNotInHomePage(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.HomePageTestClass@29d80d2b]" started-at="2023-08-23T19:11:16 AEST" name="verifyTheLogoIsDisplayedOrNotInHomePage" data-provider="login" finished-at="2023-08-23T19:11:19 AEST" duration-ms="2776" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheLogoIsDisplayedOrNotInHomePage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:executePageClasses.HomePageTestClass@29d80d2b]" started-at="2023-08-23T19:11:19 AEST" name="afterMethod" finished-at="2023-08-23T19:11:20 AEST" duration-ms="434" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTheLogoIsDisplayedOrNotInHomePage status=SUCCESS method=HomePageTestClass.verifyTheLogoIsDisplayedOrNotInHomePage(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.HomePageTestClass@29d80d2b] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- executePageClasses.HomePageTestClass -->
+    </test> <!-- Test2 -->
+    <test started-at="2023-08-23T19:11:06 AEST" name="Test1" finished-at="2023-08-23T19:11:37 AEST" duration-ms="30909">
+      <class name="executePageClasses.LoginPageTestClass">
+        <test-method signature="verifySuceesfullLogin(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:06 AEST" name="verifySuceesfullLogin" data-provider="login" finished-at="2023-08-23T19:11:06 AEST" duration-ms="0" status="FAIL">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[java.io.IOException: Stream Closed]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: java.io.IOException: Stream Closed
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:57)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:157)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:803)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:728)
+at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:924)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+at java.base/java.lang.Thread.run(Thread.java:834)
+Caused by: java.io.IOException: Stream Closed
+at java.base/java.io.FileInputStream.available0(Native Method)
+at java.base/java.io.FileInputStream.available(FileInputStream.java:330)
+at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:359)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:133)
+at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:183)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.fill(ZipArchiveInputStream.java:861)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readFromInflater(ZipArchiveInputStream.java:650)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.readDeflated(ZipArchiveInputStream.java:625)
+at org.apache.commons.compress.archivers.zip.ZipArchiveInputStream.read(ZipArchiveInputStream.java:528)
+at java.base/java.io.FilterInputStream.read(FilterInputStream.java:133)
+at org.apache.poi.openxml4j.util.ZipArchiveThresholdInputStream.read(ZipArchiveThresholdInputStream.java:80)
+at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:240)
+at org.apache.poi.util.IOUtils.toByteArray(IOUtils.java:203)
+at org.apache.poi.openxml4j.util.ZipArchiveFakeEntry.<init>(ZipArchiveFakeEntry.java:82)
+at org.apache.poi.openxml4j.util.ZipInputStreamZipEntrySource.<init>(ZipInputStreamZipEntrySource.java:98)
+at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:132)
+at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:319)
+at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:59)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:290)
+at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:286)
+at utilities.ExcelReadClass.getStringData(ExcelReadClass.java:20)
+at executePageClasses.DataProvider1.dp1(DataProvider1.java:25)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodNoCheckedException(MethodInvocationHelper.java:53)
+... 19 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySuceesfullLogin -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:07 AEST" name="beforeMethod" finished-at="2023-08-23T19:11:14 AEST" duration-ms="7306" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyTheCorrectSiteIsLoadedWhileHittingTheURL(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:14 AEST" name="verifyTheCorrectSiteIsLoadedWhileHittingTheURL" data-provider="login" finished-at="2023-08-23T19:11:17 AEST" duration-ms="2193" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheCorrectSiteIsLoadedWhileHittingTheURL -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:17 AEST" name="afterMethod" finished-at="2023-08-23T19:11:17 AEST" duration-ms="303" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyTheCorrectSiteIsLoadedWhileHittingTheURL status=SUCCESS method=LoginPageTestClass.verifyTheCorrectSiteIsLoadedWhileHittingTheURL(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:17 AEST" name="beforeMethod" finished-at="2023-08-23T19:11:22 AEST" duration-ms="5052" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyUnsuceesfullLoginDataProvider(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:22 AEST" name="verifyUnsuceesfullLoginDataProvider" data-provider="dp" finished-at="2023-08-23T19:11:24 AEST" duration-ms="1281" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin1]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUnsuceesfullLoginDataProvider -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:24 AEST" name="afterMethod" finished-at="2023-08-23T19:11:24 AEST" duration-ms="215" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUnsuceesfullLoginDataProvider status=SUCCESS method=LoginPageTestClass.verifyUnsuceesfullLoginDataProvider(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:24 AEST" name="beforeMethod" finished-at="2023-08-23T19:11:29 AEST" duration-ms="4861" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyUnsuceesfullLoginDataProvider(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:29 AEST" name="verifyUnsuceesfullLoginDataProvider" data-provider="dp" finished-at="2023-08-23T19:11:30 AEST" duration-ms="1303" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUnsuceesfullLoginDataProvider -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:30 AEST" name="afterMethod" finished-at="2023-08-23T19:11:30 AEST" duration-ms="232" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUnsuceesfullLoginDataProvider status=SUCCESS method=LoginPageTestClass.verifyUnsuceesfullLoginDataProvider(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:30 AEST" name="beforeMethod" finished-at="2023-08-23T19:11:35 AEST" duration-ms="5182" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="verifyUnsuceesfullLoginDataProvider(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:35 AEST" name="verifyUnsuceesfullLoginDataProvider" data-provider="dp" finished-at="2023-08-23T19:11:37 AEST" duration-ms="1232" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[admin1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Admin11]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUnsuceesfullLoginDataProvider -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3]" started-at="2023-08-23T19:11:37 AEST" name="afterMethod" finished-at="2023-08-23T19:11:37 AEST" duration-ms="196" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUnsuceesfullLoginDataProvider status=SUCCESS method=LoginPageTestClass.verifyUnsuceesfullLoginDataProvider(java.lang.String,java.lang.String)[pri:0, instance:executePageClasses.LoginPageTestClass@4c163e3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- executePageClasses.LoginPageTestClass -->
+    </test> <!-- Test1 -->
+  </suite> <!-- Suite -->
 </testng-results>

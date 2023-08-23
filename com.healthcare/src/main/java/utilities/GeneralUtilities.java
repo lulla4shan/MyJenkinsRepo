@@ -46,13 +46,13 @@ public class GeneralUtilities {
 	public void clickUsinJs(WebDriver driver, WebElement element)
 	{
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeAsyncScript("arguments[0].click();", element);
+		js.executeScript("arguments[0].click();", element);
 	}
 	
 	public void scrollToAnElement(WebDriver driver, WebElement element)
 	{
 		JavascriptExecutor js=(JavascriptExecutor)driver;
-		js.executeAsyncScript("arguments[0].scrollIntoView();", element);
+		js.executeScript("arguments[0].scrollIntoView();", element);
 	}
 	
 	public void selectFromDropDownByIndex(WebElement element, int index)
@@ -76,6 +76,16 @@ public class GeneralUtilities {
 	{
 		Actions actions=new Actions(driver);
 		actions.dragAndDrop(element1, element2).build().perform();
+	}
+	
+	public void doubleClick(WebElement element, WebDriver driver) {
+		Actions actions=new Actions(driver);
+		actions.doubleClick(element);
+	}
+	
+	
+	public void addSleep() throws InterruptedException {
+		Thread.sleep(3000);
 	}
 
 }

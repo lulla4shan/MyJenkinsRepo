@@ -3,6 +3,7 @@ package pageClasses;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -89,7 +90,7 @@ public class RegisterAPatient {
 	@FindBy(xpath = "(//button[text()='Confirm'])[4]")
 	WebElement confirmButton;
 	
-	@FindBy(xpath = "//a[@href='/openmrs/index.htm']")
+	@FindBy(xpath = "//ul[@id='breadcrumbs']//a[@href='/openmrs/index.htm']")
 	WebElement homeButton;
 	
 	@FindBy(xpath = "//div[contains(text(),'Start Visit')]")
@@ -143,9 +144,10 @@ public class RegisterAPatient {
 		generalUtilities.clickOnElement(nextButton);
 	}
 	
-	public void selectPatientConfirm()
+	public void selectPatientConfirm() throws InterruptedException
 	{
 		generalUtilities.clickOnElement(submitButton);
+		generalUtilities.addSleep();
 	}
 	
 	public String getTextOfRegisteredPatientGivenName()
@@ -179,21 +181,26 @@ public class RegisterAPatient {
 	
 	public void clickOnHomeButton()
 	{
-		explicitWait.elemnetToBeClicableWait(driver, homeButton);
-		//generalUtilities.clickUsinJs(driver, homeButton);
+		//explicitWait.elemnetToBeClicableWait(driver, homeButton);
 		generalUtilities.clickOnElement(homeButton);
+		
 	}
 	
-	public void clickOnStartVisitButton()
+	public void clickOnStartVisitButton() throws InterruptedException
 	{
-
+		//explicitWait.visibitlityOfElementWait(driver, startvisitButton);
 		generalUtilities.clickUsinJs(driver, startvisitButton);
+		generalUtilities.addSleep();
+		
 	}
 	
-	public void clickOnConfirmStartVisitButton()
+	public void clickOnConfirmStartVisitButton() throws InterruptedException
 	{
-		explicitWait.elemnetToBeClicableWait(driver, confirmStartvisitButton);
-		generalUtilities.clickUsinJs(driver, confirmStartvisitButton);
+		//explicitWait.elemnetToBeClicableWait(driver, confirmStartvisitButton);
+		
+		generalUtilities.clickOnElement(confirmButton);
+		generalUtilities.addSleep();
+		
 	}
 
 

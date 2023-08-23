@@ -7,12 +7,14 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.ExplicitWaitClass;
 import utilities.GeneralUtilities;
 
 public class HomePageClass {
 	
 	WebDriver driver;
 	GeneralUtilities generalUtilities=new GeneralUtilities();
+	ExplicitWaitClass ewait = new ExplicitWaitClass();
 	
 	public HomePageClass(WebDriver driver) {
 		this.driver=driver;
@@ -73,6 +75,7 @@ public class HomePageClass {
 	
 	public void clickOnFindAPatientButton()
 	{
+		ewait.presesceOfElemnetLocatedWaitXpath(driver, "//a[@id='coreapps-activeVisitsHomepageLink-coreapps-activeVisitsHomepageLink-extension']");
 		generalUtilities.clickOnElement(clickOnFindPatientRecord);
 	}
 

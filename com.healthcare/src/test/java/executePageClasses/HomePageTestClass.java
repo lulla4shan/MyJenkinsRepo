@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 
 import pageClasses.HomePageClass;
 import pageClasses.LoginPageClass;
+import retry.RetryAnalyzer;
 
 public class HomePageTestClass extends BaseClass {
 	
@@ -14,7 +15,7 @@ public class HomePageTestClass extends BaseClass {
 	HomePageClass hp;
 	
 	
-  @Test(dataProviderClass = DataProvider1.class, dataProvider = "login")
+  @Test(dataProviderClass = DataProvider1.class, dataProvider = "login", retryAnalyzer = RetryAnalyzer.class)
   public void verifyAllTilesAreDisplayedInHomePage(String uName, String Password) {
 	  lp=new LoginPageClass(driver);
 	  lp.loginAsRegistrationDesk(uName,Password);
@@ -25,7 +26,7 @@ public class HomePageTestClass extends BaseClass {
 	  Assert.assertTrue(actualOutcome);
   }
   
-  @Test(dataProviderClass = DataProvider1.class, dataProvider = "login")
+  @Test(dataProviderClass = DataProvider1.class, dataProvider = "login", retryAnalyzer = RetryAnalyzer.class, groups = {"group1"})
   public void verifyTheLogoIsDisplayedOrNotInHomePage(String uName, String Password) throws IOException {
 	  lp=new LoginPageClass(driver);
 	  lp.loginAsRegistrationDesk(lp.readStringData(2, 1),lp.readStringData(3, 1));

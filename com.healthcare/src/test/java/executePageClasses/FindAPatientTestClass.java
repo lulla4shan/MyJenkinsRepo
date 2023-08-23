@@ -15,6 +15,7 @@ import pageClasses.FindAPatientClass;
 import pageClasses.HomePageClass;
 import pageClasses.LoginPageClass;
 import pageClasses.RegisterAPatient;
+import retry.RetryAnalyzer;
 import utilities.GeneralUtilities;
 
 public class FindAPatientTestClass extends BaseClass {
@@ -24,9 +25,9 @@ public class FindAPatientTestClass extends BaseClass {
 	RegisterAPatient rp;
 	FindAPatientClass fp;
 
-	@Test(dataProviderClass = DataProvider1.class, dataProvider = "login")
+	@Test(dataProviderClass = DataProvider1.class, dataProvider = "login", retryAnalyzer = RetryAnalyzer.class, groups = {"group2"})
 	public void verifyTheRegisteredPatientIsFoundOrNotInPatientRecordTable(String uName, String password)
-			throws IOException {
+			throws IOException, InterruptedException {
 		lp = new LoginPageClass(driver);
 
 		lp.loginAsRegistrationDesk(uName, password);
@@ -46,11 +47,11 @@ public class FindAPatientTestClass extends BaseClass {
 		rp.selectPatientRelated(2, rp.readStringData(18, 1));
 		rp.selectPatientConfirm();
 		rp.clickOnHomeButton();
-		rp.clickOnHomeButton();
+		
 		hp.clickOnFindAPatientButton();
 
 		fp = new FindAPatientClass(driver);
-		Boolean actualOutcome = fp.isPatientNameDisplayed(gname);
+		Boolean actualOutcome = fp.isPatientNameDisplayed(gname.concat(fName));
 
 		System.out.println(gname);
 
